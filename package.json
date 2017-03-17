@@ -21,7 +21,9 @@
     "server:dev": "supervisor -w backend/ -e js,sql backend/server",
     "lint": "eslint --ext js,jsx ./*.js frontend jest backend",
     "test:dev": "node jest/run.js --watch",
-    "test": "npm run lint && node jest/run.js"
+    "test": "npm run lint && node jest/run.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -104,6 +106,7 @@
     "supervisor": "^0.12.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack-dev-server": "^2.2.0",
+    "@kadira/storybook": "^2.21.0"
   }
 }
